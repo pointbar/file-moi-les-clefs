@@ -27,7 +27,7 @@ app.get('/gh-callback', (req, res) => {
     if (!hostname || whitelist.has(hostname)) {
       res.redirect(302, format(redirectUrl))
     } else {
-      res.send(403, `<h1>403 Error</h1><p>Vous avez demandé : ${destination}, et ${hostname} n'est pas présent dans notre <a href="https://github.com/daktary-team/file-moi-les-clefs/blob/master/whitelist.csv">liste d'invité</a>.</p>`)
+      res.send(403, `<h1>403 Error</h1><p>Vous avez demandé : ${destination}, et ${hostname} n'est pas présent dans notre <a href="https://github.com/pointbar/file-moi-les-clefs/blob/master/whitelist.csv">liste d'invité</a>.</p>`)
     }
   })
 })
